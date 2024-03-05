@@ -1,38 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SCA</title>
 </head>
+
+
 <body>
     <div>
-        <div class="text-center"><h1> SCA </h1></div>
+        <div class="text-center">
+            <h1> SCA </h1>
+        </div>
         <div class="container">
-                <div class="row">
+            <div class="row">
+                <div></div>
+                <div style="float: left;" class="col">
+                    <p class="text-center" style="font-size: 1.5rem; font-family: monospace;">Configurações:</p>
+                    <div class="card" >
+                        <div class="card-body">
 
-                        <div class="col">
-                            <p class="text-center" style="font-size: 1.5rem; font-family: monospace;">Especificações:</p>
-
-                            <div class="card">
-                                <div class="card-body">
-                                    
+                            <form action="javascript: calc()">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" placeholder="1000" id="value">
+                                    <span class="input-group-text">.00</span>
                                 </div>
-                            
-                            </div>
+
+                                <div class="input-group flex-nowrap">
+                                    <span class="input-group-text" id="addon-wrapping">%</span>
+                                    <input type="text" class="form-control" aria-label="Username"
+                                        aria-describedby="addon-wrapping" placeholder="100%" id="percent">
+                                </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Confirm</button>
+                            </form>
+
+
                         </div>
 
-                        <div class="col">
-                            <p class="text-center"  style="font-size: 1.5rem; font-family: monospace;">Resultados:</p>
-                            <div class="card">
-                                <div class="card-body">
-                                </div>
-                            </div>
+                    </div>
+                    <br>
+                    <p class="text-center" style="font-size: 1.5rem; font-family: monospace;">Resultado:</p>
+
+                    <div class="card" >
+                        <div class="card-body"></div>
+                    </div>
+                </div>
+
+
+                <div id="dataBase" style="float: left; height: 10px;"  class="col">
+                    <p class="text-center" style="font-size: 1.5rem; font-family: monospace;">DataBase:</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Vigência (Data):</th>
+                                        <th scope="col">Salário Minimo (R$):</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>03.04.2000</td>
+                                        <td>151.0</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>01.04.2001</td>
+                                        <td>180.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>01.04.2002</td>
+                                        <td>200.00</td>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>01.04.2003</td>
+                                            <td>240.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>01.05.2004</td>
+                                            <td>260.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>01.05.2005</td>
+                                            <td>300.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7</th>
+                                            <td>01.04.2006</td>
+                                            <td>350.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8</th>
+                                            <td>01.04.2007</td>
+                                            <td>380.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">9</th>
+                                            <td>01.03.2008</td>
+                                            <td>415.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">10</th>
+                                            <td>01.02.2009</td>
+                                            <td>465.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">11</th>
+                                            <td>01.01.2010</td>
+                                            <td>510.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">12</th>
+                                            <td>01.01.2011</td>
+                                            <td>540.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">13</th>
+                                            <td>01.03.2011</td>
+                                            <td>545.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">14</th>
+                                            <td>01.01.2012</td>
+                                            <td>622.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">15</th>
+                                            <td>01.01.2013</td>
+                                            <td>678.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">16</th>
+                                            <td>01.01.2014</td>
+                                            <td>724.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">17</th>
+                                            <td>01.01.2015</td>
+                                            <td>788.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">18</th>
+                                            <td>01.01.2016</td>
+                                            <td>880.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">19</th>
+                                            <td>01.01.2017</td>
+                                            <td>937.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">20</th>
+                                            <td>01.01.2018</td>
+                                            <td>954.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">21</th>
+                                            <td>01.01.2019</td>
+                                            <td>998.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">22</th>
+                                            <td>01.01.2020</td>
+                                            <td>1039.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">23</th>
+                                            <td>01.02.2020</td>
+                                            <td>1045.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">24</th>
+                                            <td>01.01.2021</td>
+                                            <td>1100.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">25</th>
+                                            <td>01.01.2022</td>
+                                            <td>1212.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">26</th>
+                                            <td>01.01.2023</td>
+                                            <td>1302.00</td>
+                                        </tr>
+
+                                    </tr>    
+                                </tbody>
+                            </table>
                         </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script>
+        function calc() {
+            const value = document.getElementById('value').value;
+            const percent = document.getElementById('percent').value;
+
+            alert("Rattata");
+        }
+
+
+    </script>
+
+    <script>
+    </script>
 </body>
+
 </html>
